@@ -1,0 +1,20 @@
+#:kivy 1.8.0
+<MyWidget>:
+    recorder: button_record
+    speaker: button_speak
+
+    Button_Record:
+        id: button_record
+        text: "Record"
+        on_press: root.record()
+        on_release: root.stop_record()
+
+        center_x: root.width / 4
+        center_y: root.height / 2
+
+    Button_Speak:
+        id: button_speak
+        text: "Speak"
+        on_press: root.speak()
+        center_y: root.height / 2
+        center_x: root.width / 4 * 3
